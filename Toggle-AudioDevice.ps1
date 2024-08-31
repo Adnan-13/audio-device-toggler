@@ -1,5 +1,21 @@
-# Import the AudioDeviceCmdlets module with the correct path
-$modulePath = "C:\Users\adnan\Documents\PowerShell\Modules\AudioDeviceCmdlets\3.1.0.2"
+# Get the current username dynamically
+$userName = $env:USERNAME
+
+# Define the base path to the modules directory
+$baseModulePath = "C:\Users\$userName\Documents\PowerShell\Modules\AudioDeviceCmdlets"
+
+# Find the latest version of the AudioDeviceCmdlets module dynamically
+$moduleVersion = Get-ChildItem -Path $baseModulePath -Directory | Sort-Object Name -Descending | Select-Object -First 1
+
+if (-not $moduleVersion) {
+	Write-Error "The AudioDeviceCmdlets module could not be found. Make sure it is installed."
+	exit
+}
+
+# Construct the full module path
+$modulePath = Join-Path -Path $baseModulePath -ChildPath $moduleVersion.Name
+
+# Import the AudioDeviceCmdlets module
 Import-Module "$modulePath\AudioDeviceCmdlets.psd1"
 
 # Load the System.Windows.Forms assembly
