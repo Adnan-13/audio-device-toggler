@@ -27,14 +27,16 @@ The Audio Device Toggler is a PowerShell script designed to easily switch betwee
    Install-Module -Name AudioDeviceCmdlets -Scope CurrentUser
    ```
 
-### 2. Download the Script
+### 2. Download the Latest Release
 
-1. Clone the repository or download the ZIP file from the [GitHub repository](https://github.com/adnan-13/audio-device-toggler):
+You can download the latest release of the Audio Device Toggler script from the following link:
 
-   ```bash
-   git clone https://github.com/adnan-13/audio-device-toggler.git
-   ```
-2. Extract the ZIP file if downloaded or navigate to the cloned repository folder.
+- [Download Latest Release](https://github.com/adnan-13/audio-device-toggler/releases/latest)
+
+This link will always direct you to the most recent version of the release.
+
+1. After downloading the ZIP file, extract it to a location of your choice.
+2. Navigate to the extracted folder to locate the Toggle-AudioDevice.ps1 script.
 
 ### 3. Configure the Script
 
@@ -63,4 +65,4 @@ The Audio Device Toggler is a PowerShell script designed to easily switch betwee
 
 ## Support
 
-If you encounter any issues or need further assistance, please open an issue on the [GitHub repository](https://github.com/adnan-13/audio-device-toggler/issues). I will do our best to assist you.
+If you encounter any issues or need further assistance, please open an issue on the [GitHub repository](https://github.com/adnan-13/audio-device-toggler/issues). I will do my best to assist you.
